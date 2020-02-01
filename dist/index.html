@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>主题前端测试</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+<header class="sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(248, 249, 250, 0.97)">
+        <div class="container">
+            <a class="navbar-brand" href="https://www.misterma.com/" title="Mr. Ma's Blog 首页">Mr. Ma's Blog</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="导航菜单">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://www.misterma.com/">首页</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://www.misterma.com/archives.html">文章归档</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://www.misterma.com/about.html">关于博客</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://www.misterma.com/links.html">友情链接</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="https://www.misterma.com/msg.html">留言板</a>
+                    </li>
+                </ul>
+                <form class="form-inline" action="https://www.misterma.com/" method="post" role="search">
+                    <div class="input-group">
+                        <input class="form-control form-control-md" type="search" placeholder="搜索" aria-label="搜索"
+                               required="required" name="s">
+                        <div class="input-group-append">
+                            <button class="btn my-sm-0 search-btn" type="submit" aria-label="搜索" title="搜索">
+                                <i class="icon-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container post-page main-content">
+    <div class="row">
+        <div class="col-md-12 col-lg-8 col-sm-12 article-page content-area">
+            <main>
+                <header class="entry-header">
+                    <h1 class="entry-title p-name" itemprop="name headline">
+                        <a itemprop="url" href="https://www.misterma.com/archives/849/" rel="bookmark">Git 同时推送到
+                            Github 和 码云</a>
+                    </h1>
+                </header>
+                <div class="header-img border-top">
+                    <a tabindex="-1" aria-hidden="true" href="https://www.misterma.com/archives/849/"
+                       aria-label="Git 同时推送到 Github 和 码云的头图"
+                       style="background-image: url(https://www.misterma.com/img/GitLogo.jpg);"></a>
+                </div>
+                <div class="article-info clearfix border-bottom border-top">
+                    <!--时间-->
+                    <div class="info">
+                        <i class="icon-calendar icon" aria-label="日期图标"></i>
+                        <span tabindex="0" title="发布时间：2020年01月20日">2020年01月20日</span>
+                    </div>
+                    <!--作者-->
+                    <div class="info">
+                        <i class="icon-user icon" aria-hidden="true"></i>
+                        <a href="https://www.misterma.com/author/1/" title="作者：Mr. Ma">Mr. Ma</a>
+                    </div>
+                    <!--阅读量-->
+                    <div class="info">
+                        <i class="icon-eye icon" aria-hidden="true"></i>
+                        <span tabindex="0" title="阅读量：24">24</span>
+                    </div>
+                    <!--评论-->
+                    <div class="info">
+                        <i class="icon-bubbles2 icon" aria-hidden="true"></i>
+                        <a title="评论" href="#comments">0 评论</a>
+                    </div>
+                    <!--分类-->
+                    <div class="info">
+                        <i class="icon-folder-open icon" aria-hidden="true"></i>
+                        <a href="https://www.misterma.com/category/tutorial/">实用教程</a></div>
+                    <!--标签-->
+                    <div class="info tags">
+                        <i class="icon-price-tags icon" aria-hidden="true"></i>
+                        <a href="https://www.misterma.com/tag/dt/">开发工具</a> <a
+                            href="https://www.misterma.com/tag/git/">Git</a></div>
+                    <div class="info d-sm-none d-none d-md-inline d-lg-inline d-xl-inline">
+                        <i class="icon icon-pencil"></i>
+                        <a href="https://www.misterma.com/admin/write-post.php?cid=849">编辑</a>
+                    </div>
+                </div>
+                <!--文章内容-->
+                <article>
+                    <div class="post-content">
+                        <p>之前一直在用 Github，最近注册了 码云，我准备把 Github 上的代码也上传一份到码云。码云有一个功能，可以直接同步 Github
+                            的公开仓库，还是比较方便的。但是对于私有仓库来说就不能直接同步了，只能手动配置远程库，然后手动推送。下面简单写一下 Git 设置和推送到多个远程库的方法。</p>
+                        <h2>添加远程库</h2>
+                        <p>Github 添加远程库可以看 <a href="https://www.misterma.com/archives/720/">Git 简易使用指南</a> 。</p>
+                        <p>添加码云的远程库和 Github 的差不多，打开你的项目仓库，如果仓库里没有文件的话直接就能看到远程库的地址，如果有文件的话点击 <code>克隆/下载</code> 复制地址：
+                        </p>
+                        <p>
+                            <img src="https://www.misterma.com/img/%E7%A0%81%E4%BA%91%E5%85%8B%E9%9A%86%E9%A1%B9%E7%9B%AE.jpg"
+                                 alt="码云查看仓库地址" title="码云查看仓库地址"></p>
+                        <p>接下来就是在项目的 Git 中关联码云的远程库，输入：</p>
+                        <pre><code class="lang-powershell">git remote add gitee 仓库地址</code></pre>
+                        <p>其中 <code>gitee</code> 是远程库的别名，<code>仓库地址</code> 就是在仓库页面复制的以 <code>.git</code> 结尾的仓库地址。
+                        </p>
+                        <p>添加完成后可以使用：</p>
+                        <pre><code class="lang-powershell">git remote</code></pre>
+                        <p>查看已关联的远程仓库。</p>
+                        <p>也可以输入：</p>
+                        <pre><code class="lang-powershell">git remote -v</code></pre>
+                        <p>查看仓库名和仓库地址，如下：</p>
+                        <pre><code class="lang-powershell">gitee   https://gitee.com/changbin1997/MWordStar.git (fetch)
+    gitee   https://gitee.com/changbin1997/MWordStar.git (push)
+    origin  https://github.com/changbin1997/MWordStar.git (fetch)
+    origin  https://github.com/changbin1997/MWordStar.git (push)</code></pre>
+                        <p>其中 <code>origin</code> 是 Github 仓库的别名，<code>gitee</code> 就是码云仓库的别名。</p>
+                        <h2>推送</h2>
+                        <p>推送的命令是：</p>
+                        <pre><code class="lang-powershell">git push 远程库名 分支</code></pre>
+                        <p>如果我要推送到 Github 的 <code>master</code> 分支就可以输入：</p>
+                        <pre><code class="lang-powershell">git push origin master</code></pre>
+                        <p>其中 <code>origin</code> 就是 Github 仓库的别名。</p>
+                        <p>推送到码云的 <code>master</code> 分支就可以输入：</p>
+                        <pre><code class="lang-powershell">git push gitee master</code></pre>
+                        <p>如果是第一次推送的话是需要输入账号和密码的。</p>
+                        <p>相关文章：</p>
+                        <p>SCSS：</p>
+                        <pre>
+                                <code class="lang-scss">
+                                    @mixin box($color, $margin, $w, $h) {
+                                        #{$color}: pink;
+                                        margin: $margin;
+                                        width: $w;
+                                        height: $h;
+                                    }
+                                    
+                                    #box {
+                                        @include box(background, 20px auto, 200px, 200px);
+                                    }
+                                </code>
+                            </pre>
+                        <ul>
+                            <li><a href="https://www.misterma.com/archives/720/">Git 简易使用指南</a></li>
+                        </ul>
+                        <hr>
+                        <div class="alert alert-secondary">
+                            版权声明：本文为原创文章，版权归 <a href="https://www.misterma.com/">Mr. Ma's Blog</a> 所有，转载请联系博主获得授权！
+                            <br>
+                            本文地址：<a
+                                href="https://www.misterma.com/archives/849/">https://www.misterma.com/archives/849/</a>
+                            <br>
+                            如果您对本文有什么问题或疑问都可以在评论区留言，我看到后会尽量解答。
+                        </div>
+                    </div>
+                </article>
+                <!--上一篇和下一篇文章的导航-->
+                <nav class="post-navigation navbar border-top">
+                    <div>
+                        <div>上一篇</div>
+                        <a href="https://www.misterma.com/archives/848/" title="Vue Router 传递参数">Vue
+                            Router 传递参数</a>
+                    </div>
+                    <div>
+                        <div class="text-lg-right text-xl-right text-md-right">下一篇</div>
+                        <a
+                                href="https://www.misterma.com/archives/850/" title="Webpack 简易使用指南">Webpack 简易使用指南</a>
+                    </div>
+                </nav>
+
+                <div id="comments" aria-label="评论区">
+
+
+                    <div id="respond-post-849" class="respond border-top">
+                        <div class="cancel-comment-reply">
+                            <a id="cancel-comment-reply-link"
+                               href="https://www.misterma.com/archives/849/#respond-post-849" rel="nofollow"
+                               style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a></div>
+
+                        <h2 id="response">发表评论</h2>
+                        <form method="post" action="https://www.misterma.com/archives/849/comment" id="comment-form"
+                              role="form">
+                            <div class="row">
+                                <!--评论内容输入-->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                    <label for="textarea" class="required">评论内容</label>
+                                    <textarea name="text" id="textarea" class="textarea form-control" required
+                                              placeholder="请在此处输入评论内容"></textarea>
+                                </div>
+                                <!--Emoji表情面板-->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                    <button type="button" class="btn btn btn-outline-secondary btn-sm"
+                                            data-target="#emoji-box" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="emoji-box" id="show-emoji"
+                                            url="https://www.misterma.com/usr/themes/MWordStar/emoji.php">
+                                        <span>😀</span>
+                                        <span>Emoji表情</span>
+                                    </button>
+                                    <div id="emoji-box" class="collapse" aria-label="表情面板">
+                                        <div class="mt-2 mb-2 border">
+                                            <div class="emoji-classification border-bottom" aria-label="表情类型">
+                                                <button aria-label="表情" title="表情" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="smileys">😀
+                                                </button>
+                                                <button aria-label="人物/手势" title="人物/手势" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="character">👦
+                                                </button>
+                                                <button aria-label="服装/配饰" title="服装/配饰" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="clothing">👕
+                                                </button>
+                                                <button aria-label="动物/自然" title="动物/自然" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="animal">🐶
+                                                </button>
+                                                <button aria-label="食物" title="食物" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="food">🍏
+                                                </button>
+                                                <button aria-label="运动" title="运动" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="motion">⚽
+                                                </button>
+                                                <button aria-label="旅行/地点" title="旅行/地点" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="tourism">🚚
+                                                </button>
+                                                <button aria-label="物体" title="物体" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="objects">⌚
+                                                </button>
+                                                <button aria-label="符号" title="符号" type="button"
+                                                        class="btn btn btn-outline-secondary btn-sm"
+                                                        classification="symbols">❤
+                                                </button>
+                                            </div>
+                                            <div class="emoji-select ml-2 mr-2 clearfix" aria-label="表情选择">
+                                                <div class="d-flex justify-content-center text-info m-3">
+                                                    <div class="spinner-border" role="status">
+                                                        <span class="sr-only">正在加载 Emoji</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12 comment-user">
+                                    登录身份: <a href="https://www.misterma.com/admin/profile.php"
+                                             title="当前登录身份：Mr. Ma">Mr. Ma</a>. <a
+                                        href="https://www.misterma.com/action/logout" title="退出">退出 &raquo;</a>
+                                </div>
+                                <!--提交按钮-->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                    <button type="submit" class="submit btn btn-secondary">提交评论</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <div class="col-md-12 col-lg-4 col-sm-12 sidebar">
+            <!--博客信息-->
+            <section class="">
+                <h4>博客信息</h4>
+                <div class="personal-information pt-2">
+                    <div class="user">
+                        <img src="https://www.misterma.com/img/avatar.jpg" alt="Mr. Ma的头像"
+                             class="rounded-circle avatar">
+                        <div class="p-2">
+                            <a class="user-name mt-2" target="_blank" href="https://www.misterma.com/">Mr. Ma</a>
+                            <p class="introduction mt-1">人生之路，难免坎坷，但我执着。</p>
+                        </div>
+                    </div>
+                    <div class="website clearfix border-top">
+                        <div class="info float-left border-right">
+                            <p class="quantity">114</p>
+                            文章数
+                        </div>
+                        <div class="info float-left border-right">
+                            <p class="quantity">80</p>
+                            评论数
+                        </div>
+                        <div class="info float-left">
+                            <p class="quantity">778天</p>
+                            运行天数
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!--最新文章-->
+            <section class="latest-articles">
+                <h4>最新文章</h4>
+                <ul aria-label="最新文章">
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/851/">
+                            <p>Webpack 配置 Babel</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/850/">
+                            <p>Webpack 简易使用指南</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/849/">
+                            <p>Git 同时推送到 Github 和 码云</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/848/">
+                            <p>Vue Router 传递参数</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/847/">
+                            <p>关于自定义模态对话框的可访问性问题</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/846/">
+                            <p>推荐几款免费好用的 Windows 软件</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/845/">
+                            <p>HTML IE 条件注释</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/844/">
+                            <p>常见的浏览器的 UserAgent</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/843/">
+                            <p>通过开源项目免费申请 JetBrains 软件许可证</p>
+                        </a>
+                    </li>
+                    <li class="border-bottom">
+                        <a class="text-secondary" href="https://www.misterma.com/archives/842/">
+                            <p>JavaScript Fetch 简单使用指南</p>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+            <!--最新回复-->
+            <section class="">
+                <h4>最新回复</h4>
+                <ul class="list-unstyled" aria-label="最新回复">
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d="
+                             alt="Mr. Ma" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary" href="https://www.misterma.com/links.html#comment-184">Mr.
+                                Ma</a>
+                            <div>已添加链接到首页</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/374f05dc3e417377ce701af63965db4c?s=40&amp;r=G&amp;d="
+                             alt="便宜vps" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary"
+                               href="https://www.misterma.com/links.html#comment-183">便宜vps</a>
+                            <div>已经添加贵站链接至首页。我站：[...]</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d="
+                             alt="Mr. Ma" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary" href="https://www.misterma.com/msg.html#comment-182">Mr.
+                                Ma</a>
+                            <div>交换链接可以按照友情链接页面的[...]</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/401d77f495c654d21d8ebe22a6c082d0?s=40&amp;r=G&amp;d="
+                             alt="deltaqin" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary"
+                               href="https://www.misterma.com/archives/819/#comment-181">deltaqin</a>
+                            <div>感谢！</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/10348ed1b2738b583904435eac3d2119?s=40&amp;r=G&amp;d="
+                             alt="便宜vps" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary" href="https://www.misterma.com/msg.html#comment-180">便宜vps</a>
+                            <div>交换链接吗？我站：https:[...]</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d="
+                             alt="Mr. Ma" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary" href="https://www.misterma.com/archives/819/#comment-179">Mr.
+                                Ma</a>
+                            <div>导航栏显示分类可以在主题外观设[...]</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/2f29eef7023c4fca287a7cb744518434?s=40&amp;r=G&amp;d="
+                             alt="t" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary"
+                               href="https://www.misterma.com/archives/819/#comment-178">t</a>
+                            <div>另外文中插入了图片，并且在下方[...]</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/2f29eef7023c4fca287a7cb744518434?s=40&amp;r=G&amp;d="
+                             alt="t" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary"
+                               href="https://www.misterma.com/archives/819/#comment-177">t</a>
+                            <div>分类展开显示</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/2f29eef7023c4fca287a7cb744518434?s=40&amp;r=G&amp;d="
+                             alt="t" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary"
+                               href="https://www.misterma.com/archives/819/#comment-176">t</a>
+                            <div>该如何设置？我想在导航栏上显示分类。</div>
+                        </div>
+                    </li>
+                    <li class="media border-bottom">
+                        <img class="avatar"
+                             src="https://secure.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d="
+                             alt="Mr. Ma" width="40" height="40"/>
+                        <div class="media-body ml-2">
+                            <a class="text-secondary" href="https://www.misterma.com/archives/819/#comment-175">Mr.
+                                Ma</a>
+                            <div>在后台的设置中选择 阅读，进入[...]</div>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <!--文章分类-->
+            <section class="">
+                <h4>文章分类</h4>
+                <ul class="list-group list-group-flush" aria-label="文章分类">
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/php/"
+                            title="这里是一些PHP相关的教程和笔记。">PHP</a><span
+                            class="badge badge-secondary badge-pill">11</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/wfd/"
+                            title="这里是一些与Web前端相关的教程和笔记。">前端开发</a><span
+                            class="badge badge-secondary badge-pill">46</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/database/"
+                            title="这里是数据库相关的教程和笔记。">数据库</a><span class="badge badge-secondary badge-pill">6</span>
+                    </li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/linux/"
+                            title="这里是一些Linux相关的教程和笔记。">Linux相关</a><span
+                            class="badge badge-secondary badge-pill">18</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/tutorial/"
+                            title="这里包括了计算机、手机和其他数码产品相关的实用教程。">实用教程</a><span
+                            class="badge badge-secondary badge-pill">23</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/vps/"
+                            title="这里包含我用过的一些服务器的使用体验。">服务器体验</a><span
+                            class="badge badge-secondary badge-pill">2</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/recommend/"
+                            title="这里会分享一些软件的使用体验，也会推荐一些我觉得比较好的软件。">软件推荐</a><span
+                            class="badge badge-secondary badge-pill">3</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/category/typecho/"
+                            title="这里包含了 Typecho 相关的教程和笔记。">Typecho</a><span
+                            class="badge badge-secondary badge-pill">5</span></li>
+                </ul>
+            </section>
+            <!--标签云-->
+            <section class="">
+                <h4>标签云</h4>
+                <div class="ltags-list pt-2" aria-label="标签云">
+                    <a href="https://www.misterma.com/tag/linux/" rel="tag" class="size-30" title="21 篇文章">Linux</a>
+                    <a href="https://www.misterma.com/tag/win10/" rel="tag" class="size-10" title="7 篇文章">Win10</a>
+                    <a href="https://www.misterma.com/tag/html5/" rel="tag" class="size-20" title="11 篇文章">HTML5</a>
+                    <a href="https://www.misterma.com/tag/vps/" rel="tag" class="size-10" title="9 篇文章">VPS</a>
+                    <a href="https://www.misterma.com/tag/php/" rel="tag" class="size-20" title="12 篇文章">PHP</a>
+                    <a href="https://www.misterma.com/tag/mysql/" rel="tag" class="size-10" title="8 篇文章">MySQL</a>
+                    <a href="https://www.misterma.com/tag/db/" rel="tag" class="size-10" title="7 篇文章">数据库</a>
+                    <a href="https://www.misterma.com/tag/dn/" rel="tag" class="size-10" title="6 篇文章">域名</a>
+                    <a href="https://www.misterma.com/tag/javascript/" rel="tag" class="size-0"
+                       title="37 篇文章">JavaScript</a>
+                    <a href="https://www.misterma.com/tag/re/" rel="tag" class="size-5" title="1 篇文章">正则表达式</a>
+                    <a href="https://www.misterma.com/tag/blog/" rel="tag" class="size-20" title="11 篇文章">博客</a>
+                    <a href="https://www.misterma.com/tag/markdown/" rel="tag" class="size-5"
+                       title="3 篇文章">Markdown</a>
+                    <a href="https://www.misterma.com/tag/captcha/" rel="tag" class="size-5" title="2 篇文章">验证码</a>
+                    <a href="https://www.misterma.com/tag/upload/" rel="tag" class="size-5" title="4 篇文章">上传文件</a>
+                    <a href="https://www.misterma.com/tag/download/" rel="tag" class="size-10" title="5 篇文章">下载</a>
+                    <a href="https://www.misterma.com/tag/ajax/" rel="tag" class="size-10" title="6 篇文章">AJAX</a>
+                    <a href="https://www.misterma.com/tag/jquery/" rel="tag" class="size-5" title="2 篇文章">jQuery</a>
+                    <a href="https://www.misterma.com/tag/baidu/" rel="tag" class="size-10" title="5 篇文章">百度</a>
+                    <a href="https://www.misterma.com/tag/wordpress/" rel="tag" class="size-5"
+                       title="4 篇文章">WordPress</a>
+                    <a href="https://www.misterma.com/tag/css3/" rel="tag" class="size-5" title="4 篇文章">CSS3</a>
+                    <a href="https://www.misterma.com/tag/dt/" rel="tag" class="size-10" title="6 篇文章">开发工具</a>
+                    <a href="https://www.misterma.com/tag/sass/" rel="tag" class="size-5" title="1 篇文章">Sass</a>
+                    <a href="https://www.misterma.com/tag/typecho/" rel="tag" class="size-10"
+                       title="6 篇文章">Typecho</a>
+                    <a href="https://www.misterma.com/tag/vue/" rel="tag" class="size-10" title="9 篇文章">Vue</a>
+                    <a href="https://www.misterma.com/tag/accessibility/" rel="tag" class="size-10"
+                       title="5 篇文章">无障碍</a>
+                    <a href="https://www.misterma.com/tag/seo/" rel="tag" class="size-5" title="2 篇文章">SEO</a>
+                    <a href="https://www.misterma.com/tag/website/" rel="tag" class="size-10" title="9 篇文章">网站</a>
+                    <a href="https://www.misterma.com/tag/compression/" rel="tag" class="size-5"
+                       title="4 篇文章">压缩</a>
+                    <a href="https://www.misterma.com/tag/browser/" rel="tag" class="size-10" title="5 篇文章">浏览器</a>
+                    <a href="https://www.misterma.com/tag/requirejs/" rel="tag" class="size-5"
+                       title="2 篇文章">RequireJS</a>
+                    <a href="https://www.misterma.com/tag/electron/" rel="tag" class="size-5"
+                       title="1 篇文章">Electron</a>
+                    <a href="https://www.misterma.com/tag/hexo/" rel="tag" class="size-5" title="2 篇文章">Hexo</a>
+                    <a href="https://www.misterma.com/tag/babel/" rel="tag" class="size-5" title="2 篇文章">Babel</a>
+                    <a href="https://www.misterma.com/tag/debian/" rel="tag" class="size-5" title="1 篇文章">Debian</a>
+                    <a href="https://www.misterma.com/tag/centos/" rel="tag" class="size-5" title="4 篇文章">CentOS</a>
+                    <a href="https://www.misterma.com/tag/jetbrains/" rel="tag" class="size-5"
+                       title="2 篇文章">JetBrains</a>
+                    <a href="https://www.misterma.com/tag/git/" rel="tag" class="size-5" title="2 篇文章">Git</a>
+                    <a href="https://www.misterma.com/tag/webpack/" rel="tag" class="size-5"
+                       title="2 篇文章">Webpack</a>
+                </div>
+            </section>
+            <!--文章归档-->
+            <section class="">
+                <h4>文章归档</h4>
+                <ul class="list-group list-group-flush" aria-label="文章归档">
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2020/01/"
+                            title="5篇文章">2020年01月</a><span class="badge badge-secondary badge-pill">5</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/12/"
+                            title="5篇文章">2019年12月</a><span class="badge badge-secondary badge-pill">5</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/11/"
+                            title="6篇文章">2019年11月</a><span class="badge badge-secondary badge-pill">6</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/10/"
+                            title="7篇文章">2019年10月</a><span class="badge badge-secondary badge-pill">7</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/09/"
+                            title="9篇文章">2019年09月</a><span class="badge badge-secondary badge-pill">9</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/08/"
+                            title="8篇文章">2019年08月</a><span class="badge badge-secondary badge-pill">8</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/07/"
+                            title="15篇文章">2019年07月</a><span class="badge badge-secondary badge-pill">15</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/06/"
+                            title="5篇文章">2019年06月</a><span class="badge badge-secondary badge-pill">5</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/05/"
+                            title="4篇文章">2019年05月</a><span class="badge badge-secondary badge-pill">4</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/04/"
+                            title="5篇文章">2019年04月</a><span class="badge badge-secondary badge-pill">5</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/03/"
+                            title="6篇文章">2019年03月</a><span class="badge badge-secondary badge-pill">6</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/02/"
+                            title="7篇文章">2019年02月</a><span class="badge badge-secondary badge-pill">7</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2019/01/"
+                            title="6篇文章">2019年01月</a><span class="badge badge-secondary badge-pill">6</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/12/"
+                            title="2篇文章">2018年12月</a><span class="badge badge-secondary badge-pill">2</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/11/"
+                            title="4篇文章">2018年11月</a><span class="badge badge-secondary badge-pill">4</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/10/"
+                            title="1篇文章">2018年10月</a><span class="badge badge-secondary badge-pill">1</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/09/"
+                            title="2篇文章">2018年09月</a><span class="badge badge-secondary badge-pill">2</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/08/"
+                            title="1篇文章">2018年08月</a><span class="badge badge-secondary badge-pill">1</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/07/"
+                            title="3篇文章">2018年07月</a><span class="badge badge-secondary badge-pill">3</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/06/"
+                            title="1篇文章">2018年06月</a><span class="badge badge-secondary badge-pill">1</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/05/"
+                            title="2篇文章">2018年05月</a><span class="badge badge-secondary badge-pill">2</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/04/"
+                            title="5篇文章">2018年04月</a><span class="badge badge-secondary badge-pill">5</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2018/03/"
+                            title="3篇文章">2018年03月</a><span class="badge badge-secondary badge-pill">3</span></li>
+                    <li class="d-flex justify-content-between align-items-center border-bottom"><a
+                            class="text-secondary" href="https://www.misterma.com/2017/12/"
+                            title="2篇文章">2017年12月</a><span class="badge badge-secondary badge-pill">2</span></li>
+                </ul>
+            </section>
+            <!-- 其它功能-->
+            <section class="">
+                <h4>其它功能</h4>
+                <ul aria-label="其它功能">
+                    <li class="border-bottom"><a class="text-secondary" target="_blank"
+                                                 href="https://www.misterma.com/feed/">文章 RSS</a></li>
+                    <li class="border-bottom"><a class="text-secondary" target="_blank"
+                                                 href="https://www.misterma.com/feed/comments/">评论 RSS</a></li>
+                </ul>
+            </section>
+            <!--友情链接-->
+            <section class="">
+                <h4>友情链接</h4>
+                <ul aria-label="友情链接">
+                    <li class="border-bottom"><a class="text-secondary" href="http://www.ptbird.cn"
+                                                 title="There I am , in the world more exciting!" target="_blank">Postbird</a>
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
+<div id="max-img">
+    <img src="" alt="" title="再次点击可关闭" class="shadow-lg">
+    <div class="hide-img" role="button" aria-label="关闭大图" title="关闭大图" tabindex="0">×</div>
+</div>
+<footer>
+    <div class="container">
+        <nav>
+            <span>©2020 Mr. Ma's Blog</span>
+            <a href="https://www.misterma.com/sitemap.xml" target="_blank">sitemap</a>
+        </nav>
+        <span>Powered by <a href="http://www.typecho.org/" target="_blank">Typecho</a> Theme by <a
+                href="https://www.misterma.com/archives/812/" target="_blank">MWordStar</a></span>
+    </div>
+</footer>
+<script src="bundle.js"></script>
+</body>
+
+</html>
