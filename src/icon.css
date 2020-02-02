@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon.eot?pss4tm');
-  src:  url('./fonts/icomoon.eot?pss4tm#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon.ttf?pss4tm') format('truetype'),
-    url('./fonts/icomoon.woff?pss4tm') format('woff'),
-    url('./fonts/icomoon.svg?pss4tm#icomoon') format('svg');
+  src:  url('./fonts/icomoon.eot?verzj4');
+  src:  url('./fonts/icomoon.eot?verzj4#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?verzj4') format('truetype'),
+    url('./fonts/icomoon.woff?verzj4') format('woff'),
+    url('./fonts/icomoon.svg?verzj4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -46,39 +46,6 @@
 .icon-search:before {
   content: "\e986";
 }
-.icon-link:before {
-  content: "\e9cb";
-}
 .icon-eye:before {
   content: "\e9ce";
-}
-.icon-cancel-circle:before {
-  content: "\ea0d";
-}
-.icon-arrow-up:before {
-  content: "\ea32";
-}
-.icon-facebook:before {
-  content: "\ea90";
-}
-.icon-instagram:before {
-  content: "\ea92";
-}
-.icon-telegram:before {
-  content: "\ea95";
-}
-.icon-twitter:before {
-  content: "\ea96";
-}
-.icon-sina-weibo:before {
-  content: "\ea9a";
-}
-.icon-steam:before {
-  content: "\eaac";
-}
-.icon-github:before {
-  content: "\eab0";
-}
-.icon-linkedin2:before {
-  content: "\eaca";
 }
