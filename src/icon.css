@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('./fonts/icomoon.eot?2ybt5c');
-  src:  url('./fonts/icomoon.eot?2ybt5c#iefix') format('embedded-opentype'),
-    url('./fonts/icomoon.ttf?2ybt5c') format('truetype'),
-    url('./fonts/icomoon.woff?2ybt5c') format('woff'),
-    url('./fonts/icomoon.svg?2ybt5c#icomoon') format('svg');
+  src:  url('./fonts/icomoon.eot?n4lnkm');
+  src:  url('./fonts/icomoon.eot?n4lnkm#iefix') format('embedded-opentype'),
+    url('./fonts/icomoon.ttf?n4lnkm') format('truetype'),
+    url('./fonts/icomoon.woff?n4lnkm') format('woff'),
+    url('./fonts/icomoon.svg?n4lnkm#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-qzone:before {
+  content: "\e902";
+}
+.icon-thumbs-up:before {
+  content: "\e900";
+}
+.icon-weixin:before {
+  content: "\e901";
+}
 .icon-pencil:before {
   content: "\e905";
 }
@@ -54,4 +63,10 @@
 }
 .icon-arrow-up:before {
   content: "\ea32";
+}
+.icon-share2:before {
+  content: "\ea82";
+}
+.icon-sina-weibo:before {
+  content: "\ea9a";
 }
