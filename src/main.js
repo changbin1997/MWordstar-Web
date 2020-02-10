@@ -1,6 +1,4 @@
-import $ from 'jquery';  //  引入jQuery
 import 'bootstrap';  //  引入Bootstrap
-//import 'bootstrap/dist/css/bootstrap.min.css';  //  引入Bootstrap的css
 import './bootstrap.min.css';
 import './icon.css';  //  引入字体图标
 import './style.scss';  //  引入主题样式
@@ -22,9 +20,6 @@ import hlCSS from 'highlight.js/lib/languages/css';
 import hlIni from 'highlight.js/lib/languages/ini';
 
 import 'highlight.js/styles/vs2015.css';  //  引入highlight的样式
-
-window.jquery = $;
-window.$ = $;
 
 app();
 
