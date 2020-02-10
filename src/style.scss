@@ -99,6 +99,9 @@ $shadow: 0 1px 3px rgba(26, 26, 26, 0.1);  //  区块阴影
             border: 1px solid #007ACC;
             color: #007ACC;
             padding: 10px 20px;
+            span,i{
+                transition: 0.4s;
+            }
             i{
                 margin-left: 5px;
             }
@@ -210,12 +213,16 @@ $shadow: 0 1px 3px rgba(26, 26, 26, 0.1);  //  区块阴影
 body{
     background: #E4E4E4;
 }
+a{
+    transition: 0.4s;
+}
 
 //  顶部导航条
 header{
     width: 100%;
     z-index: 999;
     .navbar{
+        transition: 0.5s;
         box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
         .search-btn{
             background: #F8F8F8;
@@ -285,6 +292,7 @@ header{
                     height: 72px;
                     display: block;
                     margin: 0 auto;
+                    transition: 0.4s;
                 }
                 .user-name{
                     color: #6C757D;
@@ -342,8 +350,10 @@ header{
     //  最新文章区域
     .latest-articles{
         li a{
+            transition: 0.4s;
             .article-img{
                 display: none;
+                transition: 0.4s;
 
             }
             p{
@@ -501,6 +511,23 @@ footer{
         opacity: 0.7;
         cursor: pointer;
     }
+}
+
+//  分享二维码区域
+#share-box{
+    #qrcode{
+        img{
+            margin: 0 auto;
+        }
+    }
+}
+
+//  点赞的效果样式
+#agree-p{
+    font-weight: 700;
+    font-size: 18px;
+    color: red;
+    position: absolute;
 }
 
 //  emoji表情面板
