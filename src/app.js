@@ -1,12 +1,13 @@
+import './jquery.qrcode.min';
 export default () => {
     var emoji = null;  //  emoji表情
     var maxImg = false;  //  大图的状态
 
     //  给文章表格添加样式
     if ($('.post-content table').length > 0) {
-        for (var i = 0; i < $('.post-content table').length; i++) {
+        for (var i = 0;i < $('.post-content table').length;i ++) {
             //  生成 Bootstrap 的响应式表格
-            var table = '<div class="table-responsive"><table class="table table-striped table-bordered table-hover">' + $('.post-content table').eq(i).html() + '</table></div>';
+            var table = '<div class="table-responsive"><table class="table table-striped table-bordered table-hover">' + $('.post-content table').eq(i).html() +  '</table></div>';
             $('.post-content table').eq(i).replaceWith(table);  //  替换文章中的表格
         }
     }
@@ -64,12 +65,20 @@ export default () => {
 
     //  给文章信息的分类链接添加 title
     if ($('.icon-folder-open').length > 0) {
-        $('.icon-folder-open').nextAll().attr('title', '分类');
+        $('.icon-folder-open').nextAll().attr({
+            'title': '分类',
+            'data-toggle': 'tooltip',
+            'data-placement': 'top'
+        });
     }
 
     //  给文章信息的标签链接添加 title
     if ($('.tags a').length > 0) {
-        $('.tags a').attr('title', '标签');
+        $('.tags a').attr({
+            'title': '标签',
+            'data-toggle': 'tooltip',
+            'data-placement': 'top'
+        });
     }
 
     //  给评论区的链接添加 target
@@ -125,16 +134,19 @@ export default () => {
         //  是否是第一次点击
         if ($(this).attr('aria-expanded') && emoji == null) {
             //  通过 ajax 加载 emoji
-            $.post($(this).attr('url'), 'emoji=emoji', function (data) {
+            $.post($('#show-emoji').attr('url'), 'emoji=emoji', function (data) {
                 emoji = JSON.parse(data);
                 $('#emoji-box .emoji-classification button').eq(0).click();  //  设置 emoji分类
             });
         }
     });
 
-    for (var i = 0; i < $('#emoji-box .emoji-classification button').length; i++) {
+    for (var i = 0;i < $('#emoji-box .emoji-classification button').length;i ++) {
         //  emoji分类按钮点击
         $('#emoji-box .emoji-classification button').eq(i).on('click', function () {
+            if (emoji == null) {
+                return false;
+            }
             $('#emoji-box .emoji-classification button').removeClass('active');  //  取消所有分类按钮的选中状态
             $(this).addClass('active');  //  设置当前按钮为选中状态
             var emojiDOM = '';
@@ -165,12 +177,18 @@ export default () => {
 
     //  监听滚动条
     $(document).on('scroll', function () {
+        //  返回顶部的按钮是否存在
         if ($('.to-top').length > 0) {
+            //  如果滚动条高度 > 屏幕高度
             if ($(document).scrollTop() > window.innerHeight) {
                 $('.to-top').removeClass('d-none');  //  显示返回顶部按钮
-            } else {
+            }else {
                 $('.to-top').addClass('d-none');  //  隐藏返回顶部按钮
             }
+        }
+
+        if (maxImg) {
+            $('#max-img').click();
         }
     });
 
@@ -188,13 +206,54 @@ export default () => {
         }
     });
 
-    if ($('pre code').length > 0) {
-        const langRe = /^lang-/;
-        let langClass = '';
+    //  是否是文章页
+    if ($('#qrcode').length > 0) {
+        //  生成文章二维码
+        $('#qrcode').qrcode({
+            width: 235,
+            height: 235,
+            text: $('#share-btn').attr('data-url')
+        });
 
-        for (let i = 0; i < $('pre code').length; i++) {
-            langClass = $('pre code').eq(i).attr('class');
-            $('pre code').eq(i).attr('class', langClass.replace(langRe, ''));
+        //  给二维码图片添加 alt 属性
+        if ($('#qrcode img').length > 0) {
+            $('#qrcode img').attr('alt', '文章二维码');
         }
     }
-};
+
+    //  点赞
+    $('#agree-btn').on('click', function () {
+        $('#agree-btn').get(0).disabled = true;
+        $.ajax({
+            type: 'post',
+            url: $('#agree-btn').attr('data-url'),
+            data: 'agree=' + $('#agree-btn').attr('data-cid'),
+            async: true,
+            timeout: 30000,
+            cache: false,
+            success: function (data) {
+                var re = /\d/;
+                if (re.test(data)) {
+                    $('#agree-btn .agree-num').html(data);
+                    $('.post-page').append('<span id="agree-p">赞 + 1</span>');
+                    $('#agree-p').css({
+                        top: $('#agree-btn').offset().top - 25,
+                        left: $('#agree-btn').offset().left + $('#agree-btn').outerWidth() / 2 - $('#agree-p').outerWidth() / 2
+                    });
+
+                    $('#agree-p').animate({
+                        top: $('#agree-btn').offset().top - 70,
+                        opacity: 0
+                    }, 400, function () {
+                        $('#agree-p').remove();
+                    });
+                }
+            },
+            error: function () {
+                $('#agree-btn').get(0).disabled = false;
+            }
+        });
+    });
+
+    $('[data-toggle="tooltip"]').tooltip();  //  初始化工具提示
+}
