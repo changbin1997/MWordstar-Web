@@ -18,6 +18,7 @@ import hlMarkdown from 'highlight.js/lib/languages/markdown';
 import hlYaml from 'highlight.js/lib/languages/yaml';
 import hlCSS from 'highlight.js/lib/languages/css';
 import hlIni from 'highlight.js/lib/languages/ini';
+import hlSql from 'highlight.js/lib/languages/sql';
 
 import 'highlight.js/styles/vs2015.css';  //  引入highlight的样式
 
@@ -36,5 +37,6 @@ hljs.registerLanguage('markdown', hlMarkdown);
 hljs.registerLanguage('yaml', hlYaml);
 hljs.registerLanguage('css', hlCSS);
 hljs.registerLanguage('ini', hlIni);
+hljs.registerLanguage('sql', hlSql);
 
 hljs.initHighlightingOnLoad();
