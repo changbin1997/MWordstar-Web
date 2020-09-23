@@ -8,464 +8,766 @@
     <title>主题前端测试</title>
     <link rel="stylesheet" href="style.css" type="text/css">
 </head>
+<body data-rounded="rounded-0">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+            <div class="container">
+                <a class="navbar-brand" href="http://localhost/php/typecho/" title="Mr. Ma's Blog 首页">Mr. Ma's Blog</a>
+                <button class="navbar-toggler border-0 px-0" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="导航菜单">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-<body>
-<header class="sticky-top">
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: rgba(248, 249, 250, 0.97)">
-        <div class="container">
-            <a class="navbar-brand" href="http://localhost/php/Typecho/" title="冰是睡着的水的博客 首页">冰是睡着的水的博客</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="导航菜单">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link"  href="http://localhost/php/Typecho/">首页</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            文章分类
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/php/">PHP</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/wfd/">前端开发</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/database/">数据库</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/linux/">Linux相关</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/tutorial/">实用教程</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/vps/">服务器体验</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/recommend/">软件推荐</a><a class="dropdown-item" href="http://localhost/php/Typecho/index.php/category/typecho/">Typecho</a>                            </div>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="http://localhost/php/Typecho/index.php/archives.html">文章归档</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="http://localhost/php/Typecho/index.php/about.html">关于博客</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="http://localhost/php/Typecho/index.php/links.html">友情链接</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link" href="http://localhost/php/Typecho/index.php/msg.html">留言板</a>
-                    </li>
-                </ul>
-                <form class="form-inline" action="http://localhost/php/Typecho/" method="post" role="search">
-                    <div class="input-group">
-                        <input class="form-control form-control-md" type="search" placeholder="搜索" aria-label="搜索" required="required" name="s">
-                        <div class="input-group-append">
-                            <button class="btn my-sm-0 search-btn" type="submit" aria-label="搜索" title="搜索" data-toggle="tooltip" data-placement="bottom">
-                                <i class="icon-search"></i>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/php/typecho/">首页</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="javascript:;" id="navbarDropdownMenuLink"
+                                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                文章分类
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <a class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/php/">PHP</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/wfd/">前端开发</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/vue/">Vue</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/vuex/">Vuex</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/database/">数据库</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/linux/">Linux相关</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/tutorial/">实用教程</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/vps/">服务器体验</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/recommend/">软件推荐</a><a
+                                    class="dropdown-item"
+                                    href="http://localhost/php/typecho/index.php/category/typecho/">Typecho</a> </div>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/php/typecho/index.php/archives.html">文章归档</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/php/typecho/index.php/about.html">关于博客</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/php/typecho/index.php/links.html">友情链接</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="http://localhost/php/typecho/index.php/msg.html">留言板</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline search-form" action="http://localhost/php/typecho/" method="post"
+                        role="search">
+                        <div class="input-group">
+                            <input data-url="http://localhost/php/typecho/"
+                                class="border-right-0 form-control form-control-md search-input rounded-0" type="text"
+                                placeholder="搜索" aria-label="搜索" required="required" name="s">
+                            <div class="input-group-append">
+                                <button class="btn my-sm-0 search-btn-light rounded-0" type="submit" aria-label="搜索"
+                                    title="搜索" data-toggle="tooltip" data-placement="bottom">
+                                    <i class="icon-search"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container post-page main-content">
+        <div class="row">
+            <div class="col-md-12 col-lg-8 col-sm-12 article-page content-area">
+                <main class="rounded-0">
+                    <header class="entry-header">
+                        <h1 class="entry-title p-name" itemprop="name headline">
+                            <a itemprop="url" href="http://localhost/php/typecho/index.php/archives/854/"
+                                rel="bookmark">把 ESLint 集成到 VSCode 中</a>
+                        </h1>
+                    </header>
+                    <div class="header-img border-top">
+                        <a tabindex="-1" aria-hidden="true" href="http://localhost/php/typecho/index.php/archives/854/"
+                            aria-label="把 ESLint 集成到 VSCode 中的头图"
+                            style="background-image: url(https://www.misterma.com/img/ESLintLogo.jpg);background-color: rgb(19,229,207);"></a>
+                    </div>
+                    <div class="article-info clearfix border-bottom border-top">
+                        <!--时间-->
+                        <div class="info">
+                            <i class="icon-calendar icon text-info" aria-hidden="true"></i>
+                            <span class="text-info" data-toggle="tooltip" data-placement="top" tabindex="0"
+                                title="发布日期：2020年02月05日">2020年02月05日</span>
+                        </div>
+                        <!--作者-->
+                        <div class="info">
+                            <i class="icon-user icon text-info" aria-hidden="true"></i>
+                            <a class="text-info" data-toggle="tooltip" data-placement="top"
+                                href="http://localhost/php/typecho/index.php/author/1/" title="作者：Mr. Ma">Mr. Ma</a>
+                        </div>
+                        <!--阅读量-->
+                        <div class="info">
+                            <i class="icon-eye icon text-info" aria-hidden="true"></i>
+                            <span class="text-info" data-toggle="tooltip" data-placement="top" tabindex="0"
+                                title="阅读量：302">303</span>
+                        </div>
+                        <!--评论-->
+                        <div class="info">
+                            <i class="icon-bubbles2 icon text-info" aria-hidden="true"></i>
+                            <a class="text-info" data-toggle="tooltip" data-placement="top" title="评论"
+                                href="http://localhost/php/typecho/index.php/archives/854/#comments">2 评论</a>
+                        </div>
+                        <!--分类-->
+                        <div class="info category">
+                            <i class="icon-folder-open icon text-info" aria-hidden="true" data-color="text-info"></i>
+                            <a href="http://localhost/php/typecho/index.php/category/wfd/">前端开发</a> </div>
+                        <!--标签-->
+                        <div class="info tags" data-color="text-info">
+                            <i class="icon-price-tags icon text-info" aria-hidden="true"></i>
+                            <a href="http://localhost/php/typecho/index.php/tag/dt/">开发工具</a> <a
+                                href="http://localhost/php/typecho/index.php/tag/eslint/">ESLint</a> <a
+                                href="http://localhost/php/typecho/index.php/tag/vscode/">VSCode</a> </div>
+                    </div>
+                    <!--文章内容-->
+                    <article>
+                        <div data-target="_blank" data-color="text-info" class="post-content" data-atalog="true">
+                            <p>ESLint 是一个代码检查工具，它能按照配置的规则来检查代码是否符合规范。ESLint 可以直接在命令行中使用，也可以集成到编辑器中使用。ESLint
+                                集成到编辑器后就不需要每次检查都输入命令，在编码的过程中 ESLint 就可以自动检查代码，对于不符合标准或错误的代码可以快速格式化和修复。</p>
+                            <p>如果您还不了解 ESLint 的话，可以看一下 <a href="https://www.misterma.com/archives/853/">使用 ESLint
+                                    检查代码规范</a> 。</p>
+                            <h2>安装 ESLint</h2>
+                            <p>我这里使用本地安装，在安装之前可以先初始化项目：</p>
+                            <pre><code class="lang-powershell">npm init -y</code></pre>
+                            <p>安装 ESLint：</p>
+                            <pre><code class="lang-powershell">npm install --save-dev eslint</code></pre>
+                            <p>安装 ESLint 插件：</p>
+                            <pre><code class="lang-powershell">npm install --save-dev eslint-plugin-import</code></pre>
+                            <pre><code class="lang-powershell">npm install --save-dev eslint-plugin-node</code></pre>
+                            <pre><code class="lang-powershell">npm install --save-dev eslint-plugin-promise</code></pre>
+                            <pre><code class="lang-powershell">npm install --save-dev eslint-plugin-standard</code></pre>
+                            <p>上面的 ESLint 和插件可以直接写在一条命令中安装，我这里只是为了增加字数才分开安装。</p>
+                            <p>安装完成后初始化 ESLint ：</p>
+                            <pre><code class="lang-powershell">npx eslint --init</code></pre>
+                            <p>初始化的过程中需要根据提示选择配置，初始化完成后会在项目的根目录生成一个配置文件。</p>
+                            <h2>安装 VSCode ESLint 插件</h2>
+                            <p>要把 ESLint 集成到 VSCode 中还需要安装 VSCode 的 <a
+                                    href="https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint">ESLint
+                                    插件</a>。</p>
+                            <p>打开 VSCode，按 <code>ctrl + shift + x</code> 打开扩展插件的侧边栏，搜索 <code>ESLint</code> 如下：</p>
+                            <p><img src="https://www.misterma.com/img/VSCodeESLint%E6%8F%92%E4%BB%B6.jpg"
+                                    alt="VSCode ESLint 插件" title="VSCode ESLint 插件"></p>
+                            <p>安装 ESLint 插件，安装完成后重启 VSCode 。</p>
+                            <h2>使用</h2>
+                            <p>进入 VSCode 的设置，在 <code>扩展</code> 中找到 <code>ESLint</code> ，选中下面的几个选项：</p>
+                            <ul>
+                                <li><code>Controls whether eslint is enabled for JavaScript files or not</code></li>
+                                <li><code>Enables ESLint as a formatter</code></li>
+                            </ul>
+                            <p>在编码过程中 ESLint 就会自动检查代码，如果出现错误就会使用红色波浪线标出。鼠标移入错误的位置就可以看到错误信息，可以选择 <code>快速修复</code> 和
+                                查看详细的错误信息，如下：</p>
+                            <p><img src="https://www.misterma.com/img/VSCodeESLint%E6%8F%90%E7%A4%BA%E9%94%99%E8%AF%AF.jpeg"
+                                    alt="VSCode ESLint 显示错误信息" title="VSCode ESLint 显示错误信息"></p>
+                            <p>对于不同的错误 ESLint 会给出不同的修复方案，如下：</p>
+                            <p><img src="https://www.misterma.com/img/VSCodeESLint%E5%BF%AB%E9%80%9F%E4%BF%AE%E5%A4%8D.jpeg"
+                                    alt="VSCode ESLint 快速修复" title="VSCode ESLint 快速修复"></p>
+                            <p>这一类错误 ESLint 可以自动添加注释配置来关闭错误提示。</p>
+                            <p><img src="https://www.misterma.com/img/VSCodeESLint%E4%BB%A3%E7%A0%81%E9%A3%8E%E6%A0%BC%E4%BF%AE%E5%A4%8D.jpeg"
+                                    alt="VSCode ESLint 代码风格修复方案" title="VSCode ESLint 代码风格修复方案"></p>
+                            <p>对于代码风格方面的错误可以选择添加注释配置来关闭错误提示，也可以选择格式化代码。</p>
+                            <p>您也可以按 <code>alt + shift + f</code> 来格式化代码，如果包含多个格式化程序，就需要为项目选择一个默认的格式化程序，可以选择使用 ESLint
+                                的格式化程序。</p>
+                            <h2>配置规则</h2>
+                            <p>以 JSON 的配置文件为例，打开项目根目录下的 <code>.eslintrc.json</code> 配置文件，在 <code>rules</code> 中添加配置规则。
+                            </p>
+                            <p>下面配置禁用 <code>console</code> ：</p>
+                            <pre><code class="lang-json">{
+    &quot;rules&quot;: {
+        &quot;no-console&quot;: &quot;error&quot;
+    }
+}</code></pre>
+                            <p>如果代码中出现 <code>console</code> 就会提示错误。</p>
+                            <p>如需查看完整的配置规则可以访问 <a
+                                    href="https://cn.eslint.org/docs/rules/">https://cn.eslint.org/docs/rules/</a> 。</p>
+                            <p>相关文章：</p>
+                            <ul>
+                                <li><a href="https://www.misterma.com/archives/853/">使用 ESLint 检查代码规范</a></li>
+                            </ul>
+                        </div>
+                        <div class="clearfix">
+                            <span class="float-xl-left float-lg-left float-md-left d-block" data-toggle="tooltip"
+                                data-placement="top" tabindex="0" title="发布时间：2020年02月05日">最后编辑：2020年02月05日</span>
+                            <span tabindex="0" data-toggle="tooltip" data-placement="top"
+                                title="本文为原创文章，版权归 Mr. Ma's Blog 所有，转载请联系博主获得授权。"
+                                class="float-xl-right float-lg-right float-md-right d-block">©著作权归作者所有</span>
+                        </div>
+                        <div class="pt-3 text-center">
+                            <button data-cid="854" data-url="http://localhost/php/typecho/index.php/archives/854/"
+                                id="agree-btn" type="button" class="btn mr-2 btn-outline-info rounded-0">
+                                <i class="icon-thumbs-up"></i>
+                                <span>赞</span>
+                                <span class="agree-num">5</span>
+                            </button>
+                            <button id="share-btn" data-url="http://localhost/php/typecho/index.php/archives/854/"
+                                type="button" class="btn btn-outline-info rounded-0" data-toggle="modal"
+                                data-target="#share-box">
+                                <i class="icon-share2"></i>
+                                <span>分享</span>
                             </button>
                         </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </nav>
-</header>
-<div class="container post-page main-content">
-    <div class="row">
-        <div class="col-md-12 col-lg-8 col-sm-12 article-page content-area">
-            <main>
-                <header class="entry-header">
-                    <h1 class="entry-title p-name" itemprop="name headline">
-                        <a itemprop="url" href="http://localhost/php/Typecho/index.php/archives/681/" rel="bookmark">JavaScript 获取数据类型的几种方式</a>
-                    </h1>
-                </header>
-                <div class="article-info clearfix border-bottom border-top">
-                    <!--时间-->
-                    <div class="info">
-                        <i class="icon-calendar icon" aria-label="日期图标"></i>
-                        <span data-toggle="tooltip" data-placement="top" tabindex="0" title="发布时间：2019年04月28日">2019年04月28日</span>
-                    </div>
-                    <!--作者-->
-                    <div class="info">
-                        <i class="icon-user icon" aria-hidden="true"></i>
-                        <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/author/1/" title="作者：冰是睡着的水">冰是睡着的水</a>
-                    </div>
-                    <!--阅读量-->
-                    <div class="info">
-                        <i class="icon-eye icon" aria-hidden="true"></i>
-                        <span data-toggle="tooltip" data-placement="top" tabindex="0" title="阅读量：200">201</span>
-                    </div>
-                    <!--评论-->
-                    <div class="info">
-                        <i class="icon-bubbles2 icon" aria-hidden="true"></i>
-                        <a data-toggle="tooltip" data-placement="top" title="评论" href="#comments">0 评论</a>
-                    </div>
-                    <!--分类-->
-                    <div class="info">
-                        <i class="icon-folder-open icon" aria-hidden="true"></i>
-                        <a href="http://localhost/php/Typecho/index.php/category/wfd/">前端开发</a>                    </div>
-                    <!--标签-->
-                    <div class="info tags">
-                        <i class="icon-price-tags icon" aria-hidden="true"></i>
-                        <a href="http://localhost/php/Typecho/index.php/tag/javascript/">JavaScript</a>                    </div>
-                </div>
-                <!--文章内容-->
-                <article>
-                    <div class="post-content">
-                        <p>在JavaScript中有很多种获取数据类型的方式，不同方式最终实现的效果也会不一样，这里就来简单写一下我知道的几种方式，正好复习一下很早以前学的内容。</p><h2>typeof</h2><p><code>typeof</code> 应该是用的比较多的方式，我刚学JavaScript的时候用的也是 <code>typeof</code> ，用法如下：</p><pre><code class="lang-javascript">var a = 1;  //  number类型
-var b = 'abc';  //  string类型
+                    </article>
+                    <!--上一篇和下一篇文章的导航-->
+                    <nav class="post-navigation navbar border-top">
+                        <div>
+                            <div>上一篇</div><a href="http://localhost/php/typecho/index.php/archives/853/"
+                                title="使用 ESLint 检查代码规范">使用 ESLint 检查代码规范</a>
+                        </div>
+                        <div>
+                            <div class="text-lg-right text-xl-right text-md-right">下一篇</div><a
+                                href="http://localhost/php/typecho/index.php/archives/855/"
+                                title="Webpack 打包 jQuery 和 Bootstrap">Webpack 打包 jQuery 和 Bootstrap</a>
+                        </div>
+                    </nav>
 
-console.log(typeof(a));  //  在控制台输出a的类型
-console.log(typeof b);  //  在控制台输出b的类型</code></pre><p>无论是 <code>typeof(0)</code> 还是 <code>typeof 0</code> 都能返回数据类型，可能返回的数据类型如下：</p><table><thead><tr><th>类型</th><th>typeof 返回的类型</th></tr></thead><tbody><tr><td>number  NaN</td><td>number</td></tr><tr><td>string</td><td>string</td></tr><tr><td>json  array  null</td><td>object</td></tr><tr><td>function</td><td>function</td></tr><tr><td>undefined</td><td>undefined</td></tr></tbody></table><p>无论是 <code>json</code> 还是 <code>array</code> 返回的都是 <code>object</code> 所以光靠 <code>typeof</code> 是不能分辨 <code>json</code> 和 <code>array</code> 的。</p><h2>instanceof</h2><p>instanceof运算符用于测试构造函数的prototype属性是否出现在对象的原型链中的任何位置，可以用来判断对象和数组，如下：</p><pre><code class="lang-javascript">{} instanceof Object  //  结果为 true</code></pre><pre><code class="lang-javascript">[] instanceof Array  //  结果为 true</code></pre><pre><code class="lang-javascript">{} instanceof Array  //  结果为 false</code></pre><p><code>instanceof</code> 比较适合用来判断 <code>object</code> 和 <code>array</code> ，不能用来判断 <code>number</code> 和 <code>string</code> 。</p><h2>Object.prototype.toString.apply</h2><p><code>Object.prototype.toString.apply</code> 可以以字符串的方式返回对象类型，如下：</p><pre><code class="lang-javascript">Object.prototype.toString.apply(10);  //  返回 [object Number]
+                    <div id="comments" aria-label="评论区">
+                        <div class="comments-lists border-top">
+                            <h2>已有 2 条评论</h2>
 
-Object.prototype.toString.apply('abc');  //  返回 [object String]
-
-Object.prototype.toString.apply([1, 2]);  //  返回 [object Array]
-
-Object.prototype.toString.apply({&quot;a&quot;: &quot;1&quot;});  //  返回 [object Object]
-
-Object.prototype.toString.apply(function() {});  //  返回 [object Function]
-
-Object.prototype.toString.apply(undefined);  //  返回 [object Undefined]
-
-Object.prototype.toString.apply(null);  //  返回 [object Null]
-
-Object.prototype.toString.apply(NaN); //  返回 [object Number]</code></pre><p><code>Object.prototype.toString.apply</code> 相对来说是比较完美的获取数据类型的方式，但是在较老的IE可能会出现兼容性问题，不过现在主流的浏览器都不会出现兼容性问题。</p><p>除了上面写的方式外也可以通过某些数据类型独有的方法或属性来判断数据类型，例如可以通过是否有 <code>push</code> 方法来判断是否是数组。</p><p>其实上面的几种方式都有对应的应用场景，没有哪一个完美的说法，只有根据不同的场景选择对应的方式才是正确的。</p>                    </div>
-                    <div class="clearfix">
-                        <span class="float-xl-left float-lg-left float-md-left d-block" data-toggle="tooltip" data-placement="top" tabindex="0" title="发布时间：2019年04月28日">最后编辑：2019年07月14日</span>
-                        <span tabindex="0" data-toggle="tooltip" data-placement="top" title="本文为原创文章，版权归 冰是睡着的水的博客 所有，转载请联系博主获得授权。" class="float-xl-right float-lg-right float-md-right d-block">©著作权归作者所有</span>
-                    </div>
-                    <div class="pt-3 text-center">
-                        <button  data-cid="681" data-url="http://localhost/php/Typecho/index.php/archives/681/" id="agree-btn" type="button" class="btn btn-outline-secondary mr-2">
-                            <i class="icon-thumbs-up"></i>
-                            <span>赞</span>
-                            <span class="agree-num">0</span>
-                        </button>
-                        <button id="share-btn" data-url="http://localhost/php/Typecho/index.php/archives/681/" type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#share-box">
-                            <i class="icon-share2"></i>
-                            <span>分享</span>
-                        </button>
-                    </div>
-                </article>
-                <!--上一篇和下一篇文章的导航-->
-                <nav class="post-navigation navbar border-top">
-                    <div><div>上一篇</div><a href="http://localhost/php/Typecho/index.php/archives/678/" title="使用 CSS3 + JavaScript 简单实现元素的淡入淡出">使用 CSS3 + JavaScript 简单实现元素的淡入淡出</a></div>
-                    <div><div class="text-lg-right text-xl-right text-md-right">下一篇</div><a href="http://localhost/php/Typecho/index.php/archives/687/" title="CentOS 开放、关闭和查看端口">CentOS 开放、关闭和查看端口</a></div>
-                </nav>
-
-                <div id="comments" aria-label="评论区">
-
-
-                    <div id="respond-post-681" class="respond border-top">
-                        <div class="cancel-comment-reply">
-                            <a id="cancel-comment-reply-link" href="http://localhost/php/Typecho/index.php/archives/681/#respond-post-681" rel="nofollow" style="display:none" onclick="return TypechoComment.cancelReply();">取消回复</a>        </div>
-
-                        <h2 id="response">发表评论</h2>
-                        <form method="post" action="http://localhost/php/Typecho/index.php/archives/681/comment" id="comment-form" role="form">
-                            <div class="row">
-                                <!--评论内容输入-->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
-                                    <label for="textarea" class="required">评论内容</label>
-                                    <textarea name="text" id="textarea" class="textarea form-control" required placeholder="请在此处输入评论内容"></textarea>
-                                </div>
-                                <!--Emoji表情面板-->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
-                                    <button type="button" class="btn btn btn-outline-secondary btn-sm" data-target="#emoji-box" data-toggle="collapse" aria-expanded="false" aria-controls="emoji-box" id="show-emoji" url="http://localhost/php/Typecho/usr/themes/MWordStar/emoji.php">
-                                        <span>😀</span>
-                                        <span>Emoji表情</span>
-                                    </button>
-                                    <div id="emoji-box" class="collapse" aria-label="表情面板">
-                                        <div class="mt-2 mb-2 border">
-                                            <div class="emoji-classification border-bottom" aria-label="表情类型">
-                                                <button aria-label="表情" title="表情" type="button" class="btn btn btn-outline-secondary btn-sm" classification="smileys">😀</button>
-                                                <button aria-label="人物/手势" title="人物/手势" type="button" class="btn btn btn-outline-secondary btn-sm" classification="character">👦</button>
-                                                <button aria-label="服装/配饰" title="服装/配饰" type="button" class="btn btn btn-outline-secondary btn-sm" classification="clothing">👕</button>
-                                                <button aria-label="动物/自然" title="动物/自然" type="button" class="btn btn btn-outline-secondary btn-sm" classification="animal">🐶</button>
-                                                <button aria-label="食物" title="食物" type="button" class="btn btn btn-outline-secondary btn-sm" classification="food">🍏</button>
-                                                <button aria-label="运动" title="运动" type="button" class="btn btn btn-outline-secondary btn-sm" classification="motion">⚽</button>
-                                                <button aria-label="旅行/地点" title="旅行/地点" type="button" class="btn btn btn-outline-secondary btn-sm" classification="tourism">🚚</button>
-                                                <button aria-label="物体" title="物体" type="button" class="btn btn btn-outline-secondary btn-sm" classification="objects">⌚</button>
-                                                <button aria-label="符号" title="符号" type="button" class="btn btn btn-outline-secondary btn-sm" classification="symbols">❤</button>
+                            <ol class="comment-list">
+                                <li id="li-comment-201" class="comment-body comment-parent comment-odd">
+                                    <div id="comment-201" class="comment-box clearfix">
+                                        <div class="comment-author clearfix">
+                                            <img class="avatar"
+                                                src="https://cdn.v2ex.com/gravatar/344403d49b16a3e121a3ff339ce4761b?s=50&amp;r=G&amp;d="
+                                                alt="开心不调台" width="50" height="50" />
+                                            <div class="comment-info float-left">
+                                                <b class="author"><a href="http://www.ssytmusic.cn"
+                                                        rel="external nofollow">开心不调台</a></b>
+                                                <a class="comment-time"
+                                                    href="http://localhost/php/typecho/index.php/archives/854/#comment-201">
+                                                    79天前 </a>
                                             </div>
-                                            <div class="emoji-select ml-2 mr-2 clearfix" aria-label="表情选择">
-                                                <div class="d-flex justify-content-center text-info m-3">
-                                                    <div class="spinner-border" role="status">
-                                                        <span class="sr-only">正在加载 Emoji</span>
+                                            <span class="comment-reply float-right">
+                                                <span class="info" data-id="comment-201">
+                                                    <a href="http://localhost/php/typecho/index.php/archives/854/?replyTo=201#respond-post-854"
+                                                        rel="nofollow"
+                                                        onclick="return TypechoComment.reply('comment-201', 201);">回复</a>
+                                                </span>
+                                            </span>
+                                        </div>
+                                        <div class="comment-content" id="c-comment-201">
+                                            <p>正好需要拿走了😁</p>
+                                        </div>
+                                    </div>
+                                    <div class="comment-children clearfix">
+                                        <ol class="comment-list">
+                                            <li id="li-comment-202"
+                                                class="comment-body comment-child comment-level-odd comment-odd comment-by-author">
+                                                <div id="comment-202" class="comment-box clearfix">
+                                                    <div class="comment-author clearfix">
+                                                        <img class="avatar"
+                                                            src="https://cdn.v2ex.com/gravatar/e5622b52dd3016874ce8ac3a466ebc0c?s=50&amp;r=G&amp;d="
+                                                            alt="Mr. Ma" width="50" height="50" />
+                                                        <div class="comment-info float-left">
+                                                            <b class="author"><a href="https://www.misterma.com"
+                                                                    rel="external nofollow">Mr. Ma</a></b>
+                                                            <span class="author badge badge-secondary">作者</span>
+                                                            <a class="comment-time"
+                                                                href="http://localhost/php/typecho/index.php/archives/854/#comment-202">
+                                                                79天前 </a>
+                                                        </div>
+                                                        <span class="comment-reply float-right">
+                                                            <span class="info" data-id="comment-202">
+                                                                <a href="http://localhost/php/typecho/index.php/archives/854/?replyTo=202#respond-post-854"
+                                                                    rel="nofollow"
+                                                                    onclick="return TypechoComment.reply('comment-202', 202);">回复</a>
+                                                            </span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="comment-content" id="c-comment-202">
+                                                        <a class="parent" href="#comment-201">@开心不调台</a>
+                                                        <p>☺️</p>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </li>
+                            </ol>
+                            <nav aria-label="评论分页导航区" class="pagination-nav">
+                            </nav>
+                        </div>
+                        <div id="respond-post-854" class="respond border-top">
+                            <div class="cancel-comment-reply">
+                                <a id="cancel-comment-reply-link"
+                                    href="http://localhost/php/typecho/index.php/archives/854/#respond-post-854"
+                                    rel="nofollow" style="display:none"
+                                    onclick="return TypechoComment.cancelReply();">取消回复</a> </div>
+
+                            <h2 id="response">发表评论</h2>
+                            <form method="post" action="http://localhost/php/typecho/index.php/archives/854/comment"
+                                id="comment-form" role="form">
+                                <div class="row">
+                                    <!--评论内容输入-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                        <label for="textarea" class="required">评论内容</label>
+                                        <textarea name="text" id="textarea" class="textarea form-control rounded-0"
+                                            required placeholder="请在此处输入评论内容"></textarea>
+                                    </div>
+                                    <!--Emoji表情面板-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                        <button type="button" class="btn btn btn-sm btn-outline-info rounded-0"
+                                            data-target="#emoji-box" data-toggle="collapse" aria-expanded="false"
+                                            aria-controls="emoji-box" id="show-emoji"
+                                            url="http://localhost/php/typecho/usr/themes/MWordStar/emoji.php">
+                                            <span>😀</span>
+                                            <span>Emoji表情</span>
+                                        </button>
+                                        <div id="emoji-box" class="collapse" aria-label="表情面板">
+                                            <div class="mt-2 mb-2 border">
+                                                <div class="emoji-classification border-bottom" aria-label="表情类型"
+                                                    role="group">
+                                                    <button role="radio" aria-checked="true" aria-label="面部表情"
+                                                        title="面部表情" type="button"
+                                                        class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="smileys">😀</button>
+                                                    <button role="radio" aria-checked="false" aria-label="人物/手势"
+                                                        title="人物/手势" type="button"
+                                                        class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="character">👦</button>
+                                                    <button role="radio" aria-checked="false" aria-label="服装/配饰"
+                                                        title="服装/配饰" type="button"
+                                                        class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="clothing">👕</button>
+                                                    <button role="radio" aria-checked="false" aria-label="动物/自然"
+                                                        title="动物/自然" type="button"
+                                                        class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="animal">🐶</button>
+                                                    <button role="radio" aria-checked="false" aria-label="食物" title="食物"
+                                                        type="button" class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="food">🍏</button>
+                                                    <button role="radio" aria-checked="false" aria-label="运动" title="运动"
+                                                        type="button" class="btn btn btn-sm btn-outline-info rounded-0"
+                                                        classification="motion">⚽</button>
+                                                    <button role="radio" aria-checked="false" aria-label="旅行/地点"
+                                                        title="旅行/地点" type="button"
+                                                        class="btn btn-sm btn-outline-info rounded-0"
+                                                        classification="tourism">🚚</button>
+                                                    <button role="radio" aria-checked="false" aria-label="物体" title="物体"
+                                                        type="button" class="btn btn-sm btn-outline-info rounded-0"
+                                                        classification="objects">⌚</button>
+                                                    <button role="radio" aria-checked="false" aria-label="符号" title="符号"
+                                                        type="button" class="btn btn-sm btn-outline-info rounded-0"
+                                                        classification="symbols">❤</button>
+                                                </div>
+                                                <div class="emoji-select ml-2 mr-2 clearfix" aria-label="表情选择"
+                                                    role="list">
+                                                    <div class="d-flex justify-content-center text-info m-3">
+                                                        <div class="spinner-border" role="status">
+                                                            <span class="sr-only">正在加载 Emoji</span>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
+                                    <!--姓名输入-->
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                        <label for="author" class="required">姓名</label>
+                                        <input type="text" name="author" id="author" class="text form-control rounded-0"
+                                            value="" required="required" placeholder="请输入您的姓名或昵称" maxlength="20">
+                                    </div>
+                                    <!--Email输入-->
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                        <label for="mail" class="required">电子邮件地址</label>
+                                        <input type="email" name="mail" id="mail" class="text form-control rounded-0"
+                                            value="" required="required" placeholder="请输入您的电子邮件地址" maxlength="64">
+                                    </div>
+                                    <!--URL输入-->
+                                    <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
+                                        <label for="url">网站</label>
+                                        <input type="url" maxlength="64" name="url" id="url"
+                                            class="text form-control rounded-0" placeholder="请输入您的网站或博客地址" value="">
+                                    </div>
+                                    <!--提交按钮-->
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
+                                        <button type="submit" class="submit btn btn-info rounded-0">提交评论</button>
+                                    </div>
                                 </div>
-                                <!--姓名输入-->
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
-                                    <label for="author" class="required">姓名</label>
-                                    <input type="text" name="author" id="author" class="text form-control" value="" required="required" placeholder="请输入您的姓名或昵称" maxlength="20">
-                                </div>
-                                <!--Email输入-->
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
-                                    <label for="mail" class="required">电子邮件地址</label>
-                                    <input type="email" name="mail" id="mail" class="text form-control" value="" required="required"  placeholder="请输入您的电子邮件地址" maxlength="64">
-                                </div>
-                                <!--URL输入-->
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-12 form-group">
-                                    <label for="url">网站</label>
-                                    <input type="url" maxlength="64" name="url" id="url" class="text form-control" placeholder="请输入您的网站或博客地址" value="">
-                                </div>
-                                <!--提交按钮-->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-12 form-group">
-                                    <button type="submit" class="submit btn btn-secondary">提交评论</button>
-                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </main>
+            </div>
+
+            <div class="col-md-12 col-lg-4 col-sm-12 sidebar">
+                <!--博客信息-->
+                <section class="border  rounded-0">
+                    <h4>博客信息</h4>
+                    <div class="personal-information pt-2">
+                        <div class="user">
+                            <img src="https://www.misterma.com/img/avatar.jpg" alt="Mr. Ma的头像"
+                                class="rounded-circle avatar">
+                            <div class="p-2">
+                                <a class="user-name mt-2 text-info" target="_blank"
+                                    href="http://localhost/php/typecho/">Mr. Ma</a>
+                                <p class="introduction mt-1">人生之路，难免坎坷，但我执着。</p>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </main>
-        </div>
-
-        <div class="col-md-12 col-lg-4 col-sm-12 sidebar">
-            <!--博客信息-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>博客信息</h4>
-                <div class="personal-information pt-2">
-                    <div class="user">
-                        <img src="http://localhost/php/Typecho/usr/themes/MWordStar/img/avatar.png" alt="冰是睡着的水的博客的头像" class="rounded-circle avatar">
-                        <div class="p-2">
-                            <a class="user-name mt-2" target="_blank" href="http://localhost/php/Typecho/">冰是睡着的水的博客</a>
-                            <p class="introduction mt-1">这是我的个人博客，这里记录了我的编程学习笔记和一些计算机的实用教程。</p>
+                        </div>
+                        <div class="website clearfix border-top">
+                            <div class="info float-left border-right">
+                                <p class="quantity">128</p>
+                                文章数
+                            </div>
+                            <div class="info float-left border-right">
+                                <p class="quantity">223</p>
+                                评论数
+                            </div>
+                            <div class="info float-left">
+                                <p class="quantity">871天</p>
+                                运行天数
+                            </div>
                         </div>
                     </div>
-                    <div class="website clearfix border-top">
-                        <div class="info float-left border-right">
-                            <p class="quantity">88</p>
-                            文章数
-                        </div>
-                        <div class="info float-left border-right">
-                            <p class="quantity">32</p>
-                            评论数
-                        </div>
-                        <div class="info float-left">
-                            <p class="quantity">0天</p>
-                            运行天数
-                        </div>
+                </section>
+                <!--最新文章-->
+                <section class="border latest-articles rounded-0">
+                    <h4>最新文章</h4>
+                    <ul class="list-group" aria-label="最新文章">
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/865/">
+                                <p>Linux 搭建 Minecraft 基岩版服务器</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/864/">
+                                <p>Linux 搭建 Minecraft Java 服务器</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/863/">
+                                <p>此内容被密码保护</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/862/">
+                                <p>Webpack 本地服务器设置代理</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/861/">
+                                <p>Linux 使用 rsync 同步文件</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/860/">
+                                <p>Linux 使用 Rclone 挂载 Google Drive</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/859/">
+                                <p>ESLint 配合 Webpack 使用</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/858/">
+                                <p>RackNerd VPS 使用体验 + 简单测试</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/857/">
+                                <p>JS 根据文章中的标题生成目录索引</p>
+                            </a>
+                        </li>
+                        <li class="border-bottom">
+                            <a target="_blank" class="text-info"
+                                href="http://localhost/php/typecho/index.php/archives/856/">
+                                <p>V2Ray 配置 WebSocket + TLS</p>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+                <!--最新回复-->
+                <!--文章分类-->
+                <section class="category border d-md-none d-sm-none d-none d-lg-block d-xl-block rounded-0">
+                    <h4>文章分类</h4>
+                    <ul class="list-group list-group-flush" aria-label="文章分类">
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/php/"
+                                title="这里是一些PHP相关的教程和笔记。">PHP</a><span class="badge badge-pill badge-info">11</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/wfd/"
+                                title="这里是一些与Web前端相关的教程和笔记。">前端开发</a><span class="badge badge-pill badge-info">52</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-3"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/vue/"
+                                title="Vue.js 香港的教程和笔记">Vue</a><span class="badge badge-pill badge-info">1</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-52"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/vuex/"
+                                title="Vuex相关的教程和笔记">Vuex</a><span class="badge badge-pill badge-info">0</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/database/"
+                                title="这里是数据库相关的教程和笔记。">数据库</a><span class="badge badge-pill badge-info">6</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/linux/"
+                                title="这里是一些Linux相关的教程和笔记。">Linux相关</a><span
+                                class="badge badge-pill badge-info">21</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/tutorial/"
+                                title="这里包括了计算机、手机和其他数码产品相关的实用教程。">实用教程</a><span
+                                class="badge badge-pill badge-info">28</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/vps/"
+                                title="这里包含我用过的一些服务器的使用体验。">服务器体验</a><span class="badge badge-pill badge-info">3</span>
+                        </li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/recommend/"
+                                title="这里会分享一些软件的使用体验，也会推荐一些我觉得比较好的软件。">软件推荐</a><span
+                                class="badge badge-pill badge-info">3</span></li>
+                        <li class="d-flex justify-content-between align-items-center border-bottom indentation-0"><a
+                                target="_blank" data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://localhost/php/typecho/index.php/category/typecho/"
+                                title="这里包含了 Typecho 相关的教程和笔记。">Typecho</a><span
+                                class="badge badge-pill badge-info">5</span></li>
+                    </ul>
+                </section>
+                <!--标签云-->
+                <section class="border d-md-none d-sm-none d-none d-lg-block d-xl-block rounded-0">
+                    <h4>标签云</h4>
+                    <div class="tag-list pt-2" aria-label="标签云" role="list">
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/linux/" rel="tag"
+                            class="size-30 tag-info rounded-0" title="26 篇文章">Linux</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/win10/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="7 篇文章">Win10</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/html5/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="11 篇文章">HTML5</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/vps/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="10 篇文章">VPS</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/php/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="12 篇文章">PHP</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/mysql/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="8 篇文章">MySQL</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/db/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="7 篇文章">数据库</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/dn/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="6 篇文章">域名</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/javascript/" rel="tag"
+                            class="size-0 tag-info rounded-0" title="40 篇文章">JavaScript</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/re/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="1 篇文章">正则表达式</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/blog/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="11 篇文章">博客</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/markdown/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="3 篇文章">Markdown</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/captcha/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">验证码</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/upload/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">上传文件</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/download/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="5 篇文章">下载</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/ajax/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="7 篇文章">AJAX</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/jquery/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">jQuery</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/baidu/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="5 篇文章">百度</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/wordpress/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">WordPress</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/css3/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">CSS3</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/dt/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="10 篇文章">开发工具</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/sass/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="1 篇文章">Sass</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/typecho/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="6 篇文章">Typecho</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/vue/" rel="tag"
+                            class="size-20 tag-info rounded-0" title="10 篇文章">Vue</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/accessibility/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="5 篇文章">无障碍</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/seo/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">SEO</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/website/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="9 篇文章">网站</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/compression/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">压缩</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/browser/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="5 篇文章">浏览器</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/requirejs/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">RequireJS</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/electron/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="1 篇文章">Electron</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/hexo/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">Hexo</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/babel/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">Babel</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/debian/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="1 篇文章">Debian</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/centos/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="4 篇文章">CentOS</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/jetbrains/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">JetBrains</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/git/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">Git</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/webpack/" rel="tag"
+                            class="size-10 tag-info rounded-0" title="5 篇文章">Webpack</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/eslint/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="3 篇文章">ESLint</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/vscode/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">VSCode</a>
+                        <a role="listitem" target="_blank" data-toggle="tooltip" data-placement="top"
+                            href="http://localhost/php/typecho/index.php/tag/minecraft/" rel="tag"
+                            class="size-5 tag-info rounded-0" title="2 篇文章">Minecraft</a>
                     </div>
-                </div>
-            </section>
-            <!--最新文章-->
-            <section class="latest-articles d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>最新文章</h4>
-                <ul aria-label="最新文章">
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/825/">
-                            <p>此内容被密码保护</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/824/">
-                            <p>此内容被密码保护</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/823/">
-                            <p>Vue 条件渲染 v-if 和 条件展示 v-show</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/822/">
-                            <p>Vue 生命周期和钩子函数</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/820/">
-                            <p>Vue CLI 的简单使用</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/819/">
-                            <p>MWordStar 使用说明</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/818/">
-                            <p>简单盘点一下 JavaScript 的选择器</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/817/">
-                            <p>AJAX 跨域问题</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/816/">
-                            <p>Gravatar 简单使用教程</p>
-                        </a>
-                    </li>
-                    <li class="border-bottom">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/815/">
-                            <p>使用原生 JavaScript 实现简单轮播图</p>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <!--最新回复-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>最新回复</h4>
-                <ul class="list-unstyled" aria-label="最新回复">
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/msg.html/comment-page-1#comment-38">冰是睡着的水</a>
-                        <div>嘿，老兄</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/msg.html/comment-page-1#comment-37">冰是睡着的水</a>
-                        <div>测试一下 Markdown标题[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/658ec79dad68edd08b94fe8fd3a4afe0?s=40&amp;r=G&amp;d=" alt="dd" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/links.html/comment-page-1#comment-36">dd</a>
-                        <div>🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣🤣⚽️⚽️[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/msg.html/comment-page-1#comment-35">冰是睡着的水</a>
-                        <div>是的，我是  :mrgreen[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/msg.html/comment-page-1#comment-34">冰是睡着的水</a>
-                        <div>:mrgreen:  :neu[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/809/comment-page-2#comment-33">冰是睡着的水</a>
-                        <div>代码如下：//  创建XMLH[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="冰是睡着的水" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/809/comment-page-1#comment-32">冰是睡着的水</a>
-                        <div>代码如下：var a = 1;[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="Mr Ma" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/809/comment-page-2#comment-31">Mr Ma</a>
-                        <div>WordPress是一个以PH[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="Mr Ma" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/809/comment-page-2#comment-30">Mr Ma</a>
-                        <div>WordPress是一个以PH[...]</div>
-                    </div>
-                    </li>
-                    <li class="media border-bottom">
-                        <img class="avatar" src="http://www.gravatar.com/avatar/e5622b52dd3016874ce8ac3a466ebc0c?s=40&amp;r=G&amp;d=" alt="Mr Ma" width="40" height="40" />                        <div class="media-body ml-2">
-                        <a class="text-secondary" href="http://localhost/php/Typecho/index.php/archives/809/comment-page-2#comment-29">Mr Ma</a>
-                        <div>WordPress是一个以PH[...]</div>
-                    </div>
-                    </li>
-                </ul>
-            </section>
-            <!--文章分类-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>文章分类</h4>
-                <ul class="list-group list-group-flush" aria-label="文章分类">
-                    <li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/php/" title="这里是一些PHP相关的教程和笔记。">PHP</a><span class="badge badge-secondary badge-pill">11</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/wfd/" title="这里是一些与Web前端相关的教程和笔记。">前端开发</a><span class="badge badge-secondary badge-pill">29</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/database/" title="这里是数据库相关的教程和笔记。">数据库</a><span class="badge badge-secondary badge-pill">6</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/linux/" title="这里是一些Linux相关的教程和笔记。">Linux相关</a><span class="badge badge-secondary badge-pill">16</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/tutorial/" title="这里包括了计算机、手机和其他数码产品相关的实用教程。">实用教程</a><span class="badge badge-secondary badge-pill">20</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/vps/" title="这里包含我用过的一些服务器的使用体验。">服务器体验</a><span class="badge badge-secondary badge-pill">1</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/recommend/" title="这里会分享一些软件的使用体验，也会推荐一些我觉得比较好的软件。">软件推荐</a><span class="badge badge-secondary badge-pill">2</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/category/typecho/" title="这里包含了 Typecho 相关的教程和笔记。">Typecho</a><span class="badge badge-secondary badge-pill">3</span></li>            </ul>
-            </section>
-            <!--标签云-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>标签云</h4>
-                <div class="ltags-list pt-2" aria-label="标签云">
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/linux/" rel="tag" class="size-20" title="19 篇文章">Linux</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/win10/" rel="tag" class="size-10" title="6 篇文章">Win10</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/html5/" rel="tag" class="size-20" title="11 篇文章">HTML5</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/vps/" rel="tag" class="size-10" title="7 篇文章">VPS</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/php/" rel="tag" class="size-20" title="11 篇文章">PHP</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/mysql/" rel="tag" class="size-10" title="8 篇文章">MySQL</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/db/" rel="tag" class="size-10" title="7 篇文章">数据库</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/dn/" rel="tag" class="size-10" title="7 篇文章">域名</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/javascript/" rel="tag" class="size-30" title="24 篇文章">JavaScript</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/re/" rel="tag" class="size-5" title="1 篇文章">正则表达式</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/blog/" rel="tag" class="size-20" title="11 篇文章">博客</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/markdown/" rel="tag" class="size-5" title="3 篇文章">Markdown</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/captcha/" rel="tag" class="size-5" title="2 篇文章">验证码</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/upload/" rel="tag" class="size-5" title="3 篇文章">上传文件</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/download/" rel="tag" class="size-5" title="4 篇文章">下载</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/ajax/" rel="tag" class="size-10" title="5 篇文章">AJAX</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/jquery/" rel="tag" class="size-5" title="1 篇文章">jQuery</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/baidu/" rel="tag" class="size-10" title="5 篇文章">百度</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/wordpress/" rel="tag" class="size-10" title="5 篇文章">WordPress</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/css3/" rel="tag" class="size-5" title="4 篇文章">CSS3</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/dt/" rel="tag" class="size-5" title="4 篇文章">开发工具</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/sass/" rel="tag" class="size-5" title="1 篇文章">Sass</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/typecho/" rel="tag" class="size-10" title="5 篇文章">Typecho</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/vue/" rel="tag" class="size-5" title="4 篇文章">Vue</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/accessibility/" rel="tag" class="size-5" title="3 篇文章">无障碍</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/seo/" rel="tag" class="size-5" title="2 篇文章">SEO</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/website/" rel="tag" class="size-10" title="9 篇文章">网站</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/compression/" rel="tag" class="size-5" title="4 篇文章">压缩</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/browser/" rel="tag" class="size-5" title="2 篇文章">浏览器</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/requirejs/" rel="tag" class="size-5" title="2 篇文章">RequireJS</a>
-                    <a data-toggle="tooltip" data-placement="top" href="http://localhost/php/Typecho/index.php/tag/electron/" rel="tag" class="size-5" title="1 篇文章">Electron</a>
-                </div>
-            </section>
-            <!--文章归档-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>文章归档</h4>
-                <ul class="list-group list-group-flush" aria-label="文章归档">
-                    <li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/09/" title="6篇文章">2019年09月</a><span class="badge badge-secondary badge-pill">6</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/08/" title="8篇文章">2019年08月</a><span class="badge badge-secondary badge-pill">8</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/07/" title="15篇文章">2019年07月</a><span class="badge badge-secondary badge-pill">15</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/06/" title="5篇文章">2019年06月</a><span class="badge badge-secondary badge-pill">5</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/05/" title="4篇文章">2019年05月</a><span class="badge badge-secondary badge-pill">4</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/04/" title="5篇文章">2019年04月</a><span class="badge badge-secondary badge-pill">5</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/03/" title="6篇文章">2019年03月</a><span class="badge badge-secondary badge-pill">6</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/02/" title="7篇文章">2019年02月</a><span class="badge badge-secondary badge-pill">7</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2019/01/" title="6篇文章">2019年01月</a><span class="badge badge-secondary badge-pill">6</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/12/" title="2篇文章">2018年12月</a><span class="badge badge-secondary badge-pill">2</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/11/" title="4篇文章">2018年11月</a><span class="badge badge-secondary badge-pill">4</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/10/" title="1篇文章">2018年10月</a><span class="badge badge-secondary badge-pill">1</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/09/" title="2篇文章">2018年09月</a><span class="badge badge-secondary badge-pill">2</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/08/" title="1篇文章">2018年08月</a><span class="badge badge-secondary badge-pill">1</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/07/" title="3篇文章">2018年07月</a><span class="badge badge-secondary badge-pill">3</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/06/" title="1篇文章">2018年06月</a><span class="badge badge-secondary badge-pill">1</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/05/" title="2篇文章">2018年05月</a><span class="badge badge-secondary badge-pill">2</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/04/" title="5篇文章">2018年04月</a><span class="badge badge-secondary badge-pill">5</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2018/03/" title="3篇文章">2018年03月</a><span class="badge badge-secondary badge-pill">3</span></li><li class="d-flex justify-content-between align-items-center border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://localhost/php/Typecho/index.php/2017/12/" title="2篇文章">2017年12月</a><span class="badge badge-secondary badge-pill">2</span></li>            </ul>
-            </section>
-            <!-- 其它功能-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>其它功能</h4>
-                <ul aria-label="其它功能">
-                    <li class="last"><a class="text-secondary" href="http://localhost/php/Typecho/admin/login.php">登录</a></li>
-                    <li class="border-bottom"><a class="text-secondary" target="_blank" href="http://localhost/php/Typecho/index.php/feed/">文章 RSS</a></li>
-                    <li class="border-bottom"><a class="text-secondary" target="_blank" href="http://localhost/php/Typecho/index.php/feed/comments/">评论 RSS</a></li>
-                </ul>
-            </section>
-            <!--友情链接-->
-            <section class="d-md-none d-sm-none d-none d-lg-block d-xl-block">
-                <h4>友情链接</h4>
-                <ul aria-label="友情链接">
-                    <li class="border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-secondary" href="http://www.ptbird.cn" title="There I am , in the world more exciting!" target="_blank">Postbird</a></li>
-                </ul>
-            </section>
-        </div>    </div>
-</div>
-<div id="max-img">
-    <img src="" alt="" title="再次点击可关闭" class="shadow-lg">
-    <div class="hide-img" role="button" aria-label="关闭大图" title="关闭大图" tabindex="0">×</div>
-</div>
-<div class="modal fade bd-example-modal-sm" id="share-box" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">分享</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                </section>
+                <!--文章归档-->
+                <!-- 其它功能-->
+                <section class="border  rounded-0">
+                    <h4>其它功能</h4>
+                    <ul class="list-group" aria-label="其它功能">
+                        <li class="last"><a class="text-info" href="http://localhost/php/typecho/admin/login.php">登录</a>
+                        </li>
+                        <li class="border-bottom"><a class="text-info" target="_blank"
+                                href="http://localhost/php/typecho/index.php/feed/">文章 RSS</a></li>
+                        <li class="border-bottom"><a class="text-info" target="_blank"
+                                href="http://localhost/php/typecho/index.php/feed/comments/">评论 RSS</a></li>
+                    </ul>
+                </section>
+                <!--友情链接-->
+                <section class="border  rounded-0">
+                    <h4>友情链接</h4>
+                    <ul class="list-group" aria-label="友情链接">
+                        <li class="border-bottom"><a data-toggle="tooltip" data-placement="top" class="text-info"
+                                href="http://www.ptbird.cn" title="There I am , in the world more exciting!"
+                                target="_blank">Postbird</a></li>
+                    </ul>
+                </section>
             </div>
-            <div class="modal-body text-center">
-                <div id="qrcode" class="mb-2"></div>
-                <p>用微信扫一扫点击右上角分享</p>
-                <div>
-                    <a target="_blank" href="https://service.weibo.com/share/share.php?url=http://localhost/php/Typecho/index.php/archives/681/&title=JavaScript 获取数据类型的几种方式" class="btn btn-danger btn-block">
-                        <i class="icon-sina-weibo"></i>
-                        <span>分享到新浪微博</span>
-                    </a>
-                    <a target="_blank" href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://localhost/php/Typecho/index.php/archives/681/&title=JavaScript 获取数据类型的几种方式&site=http://localhost/php/Typecho/&summary=在JavaScript中有很多种获取数据类型的方式，不同方式最终实现的效果也会不一样，这里就来简单写一下我知道的几种方式，正好复习一下很早以前学的内容。typeoftypeof 应该是用的比较多的方式，我刚学JavaScript的时候..." class="btn btn-primary btn-block">
-                        <i class="icon-qzone"></i>
-                        <span>分享到QQ空间</span>
-                    </a>
+        </div>
+    </div>
+    <div id="max-img" role="dialog">
+        <img src="" alt="" class="shadow-lg">
+        <div class="btn-group" role="group" aria-label="图片工具栏" id="img-control">
+            <button type="button" class="btn btn-dark big" title="放大" aria-label="放大">
+                <i class="icon-zoom-in"></i>
+            </button>
+            <button type="button" class="btn btn-dark small" title="缩小" aria-label="缩小">
+                <i class="icon-zoom-out"></i>
+            </button>
+            <button type="button" class="btn btn-dark spin-left" title="左旋转90度" aria-label="左旋转90度">
+                <i class="icon-undo"></i>
+            </button>
+            <button type="button" class="btn btn-dark spin-right" title="右旋转90度" aria-label="右旋转90度">
+                <i class="icon-redo"></i>
+            </button>
+            <button type="button" class="btn btn-dark hide-img" title="关闭大图（ESC）" aria-label="关闭大图（ESC）">
+                <i class="icon-cancel-circle"></i>
+            </button>
+        </div>
+    </div>
+    <div class="modal fade bd-example-modal-sm" id="share-box" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">分享</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="关闭">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body text-center">
+                    <div id="qrcode"></div>
+                    <p>用微信扫一扫点击右上角分享</p>
+                    <div>
+                        <a target="_blank"
+                            href="https://service.weibo.com/share/share.php?url=http://localhost/php/typecho/index.php/archives/854/&title=把 ESLint 集成到 VSCode 中"
+                            class="btn btn-danger btn-block rounded-0">
+                            <i class="icon-sina-weibo"></i>
+                            <span>分享到新浪微博</span>
+                        </a>
+                        <a target="_blank"
+                            href="https://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://localhost/php/typecho/index.php/archives/854/&title=把 ESLint 集成到 VSCode 中&site=http://localhost/php/typecho/&summary=ESLint 是一个代码检查工具，它能按照配置的规则来检查代码是否符合规范。ESLint 可以直接在命令行中使用，也可以集成到编辑器中使用。ESLint 集成到编辑器后就不需要每次检查都输入命令，在编码的过程中 ESLint 就可以自动检查代码，对于不符..."
+                            class="btn btn-primary btn-block rounded-0">
+                            <i class="icon-qzone"></i>
+                            <span>分享到QQ空间</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-<footer>
-    <div class="container">
-        <span>Powered by <a href="http://www.typecho.org/" target="_blank">Typecho</a> Theme by <a href="https://www.misterma.com/archives/812/" target="_blank">MWordStar</a></span>
-    </div>
-</footer>
-<button data-toggle="tooltip" data-placement="top" type="button" class="btn to-top rounded-circle d-none" title="返回顶部" aria-label="返回顶部">
-    <i class="icon-arrow-up"></i>
-</button>
-<script src="bundle.js"></script>
+    <footer>
+        <div class="container">
+            <span>Powered by <a href="http://www.typecho.org/" target="_blank">Typecho</a> Theme by <a
+                    href="https://www.misterma.com/archives/812/" target="_blank">MWordStar</a></span>
+        </div>
+    </footer>
+    <button type="button" class="btn to-top rounded-circle d-none text-info" title="返回顶部" aria-label="返回顶部">
+        <i class="icon-arrow-up"></i>
+    </button>
+    <script type="text/javascript" src="bundle.js"></script>
 </body>
-
 </html>
